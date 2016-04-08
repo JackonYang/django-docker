@@ -6,6 +6,8 @@ services:
     build: ./backend
     ports:
       - "8000:8000"
+    volumes:
+      - ./backend:/backend
     depends_on:
       - redis
     command:
