@@ -1,5 +1,8 @@
 # -*- coding:utf-8 -*-
+import os
 from os.path import join, dirname
+
+REDIS_CONN = os.environ.get('REDIS_CONN', 'redis://127.0.0.1:6379/2')
 
 
 BASE_DIR = dirname(dirname(__file__))
@@ -31,7 +34,7 @@ else:  # DEPLOY settings.
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://redis:6379/2",
+        "LOCATION": REDIS_CONN,
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }

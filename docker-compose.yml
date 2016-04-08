@@ -8,6 +8,8 @@ services:
       - "8000:8000"
     volumes:
       - ./backend:/backend
+    environment:
+      - REDIS_CONN=redis://redis:6379/2
     depends_on:
       - redis
     command:
