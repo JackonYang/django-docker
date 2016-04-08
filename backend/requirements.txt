@@ -1,0 +1,11 @@
+# Django Framework
+django==1.8  # LTS
+
+djangorestframework==3.3.2
+markdown==2.3.1  # Markdown support for the browsable API.
+django-filter==0.12.0  # Filtering support
+
+django-thumbs  # http://djangothumbnails.com/
+
+# redis==2.10.5
+django-redis==4.2.0
