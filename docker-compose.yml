@@ -16,4 +16,4 @@ services:
         python manage.py runserver 0.0.0.0:8000
 
   redis:
-    image: daocloud.io/redis
+    image: daocloud.io/redis:3.0.7
