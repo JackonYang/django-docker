@@ -11,6 +11,7 @@ services:
     environment:
       - REDIS_CONN=redis://redis:6379/2
       - MYSQL_CONN=mysql
+      - DEBUG=False
     depends_on:
       - redis
       - mysql

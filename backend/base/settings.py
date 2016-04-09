@@ -4,10 +4,10 @@ from os.path import join, dirname
 
 REDIS_CONN = os.environ.get('REDIS_CONN', 'redis://127.0.0.1:6379/2')
 MYSQL_CONN = os.environ.get('MYSQL_CONN', None)
+DEBUG = (os.environ.get('DEBUG', 'TRUE').upper() == 'TRUE')  # True by default
 
 
 BASE_DIR = dirname(dirname(__file__))
-DEBUG = True  # SECURITY WARNING: don't run with debug turned on in production!
 ALLOWED_HOSTS = ['*']
 
 if not MYSQL_CONN:  # use sqlite3
