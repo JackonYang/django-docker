@@ -10,10 +10,21 @@ services:
       - ./backend:/backend
     environment:
       - REDIS_CONN=redis://redis:6379/2
+      - MYSQL_CONN=mysql
     depends_on:
       - redis
+      - mysql
     command:
         python manage.py runserver 0.0.0.0:8000
 
   redis:
     image: daocloud.io/redis:3.0.7
+
+  mysql:
+    image: daocloud.io/mysql:5.7
+    environment:
+      - MYSQL_DATABASE=django
+      - MYSQL_ROOT_PASSWORD=Jackon123
+      - MYSQL_ALLOW_EMPTY_PASSWORD=no
+    ports:
+        - "3306:3306"
