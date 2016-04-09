@@ -3,29 +3,29 @@ import os
 from os.path import join, dirname
 
 REDIS_CONN = os.environ.get('REDIS_CONN', 'redis://127.0.0.1:6379/2')
+MYSQL_CONN = os.environ.get('MYSQL_CONN', None)
 
 
 BASE_DIR = dirname(dirname(__file__))
 DEBUG = True  # SECURITY WARNING: don't run with debug turned on in production!
 ALLOWED_HOSTS = ['*']
 
-if DEBUG:  # DEV settings.
-    # TEMPLATE_DEBUG = True
+if not MYSQL_CONN:  # use sqlite3
+    print '!!! no MYSQL_CONN found. using sqlite3'
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': join(BASE_DIR, 'db.sqlite3'),
         }
     }
-else:  # DEPLOY settings.
-    # TEMPLATE_DEBUG = False
+else:  # use mysql
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
-            'NAME': '',
+            'NAME': 'django',
             'USER': 'root',
-            'PASSWORD': '',
-            'HOST': '',
+            'PASSWORD': 'Jackon123',
+            'HOST': MYSQL_CONN,
             'PORT': '',
         }
     }

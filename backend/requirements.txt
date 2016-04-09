@@ -9,3 +9,5 @@ django-thumbs  # http://djangothumbnails.com/
 
 # redis==2.10.5
 django-redis==4.2.0
+
+mysql-python
