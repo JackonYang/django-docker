@@ -1,11 +1,11 @@
 # .gitignore by jackon.me
 
 
-# self defined
+# self defined -- Django
 db.sqlite3
-backend/media/*  # django media
-backend/static/*  # django static root
-local_settings.py  # django local settings
+media
+static
+local_settings.py
 
 *.log
 
@@ -16,8 +16,8 @@ dump.rdb
 ### python ###
 *.py[cod]
 __pycache__/
-*.so  # C extensions
-pip-log.txt  # Installer logs
+*.so
+pip-log.txt
 
 
 ### Vim ###
