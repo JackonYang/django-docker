@@ -1,6 +1,9 @@
 # Django Framework
 django==1.8  # LTS
 
+# admin UI
+django-grappelli==2.7.1
+
 djangorestframework==3.3.2
 markdown==2.3.1  # Markdown support for the browsable API.
 django-filter==0.12.0  # Filtering support
