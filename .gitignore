@@ -21,7 +21,7 @@ pip-log.txt
 
 
 ### Vim ###
-.ropeproject/*
+.ropeproject
 [._]*.s[a-w][a-z]
 [._]s[a-w][a-z]
 *~
