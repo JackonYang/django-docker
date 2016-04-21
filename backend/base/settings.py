@@ -11,7 +11,7 @@ BASE_DIR = dirname(dirname(__file__))
 ALLOWED_HOSTS = ['*']
 
 if not MYSQL_CONN:  # use sqlite3
-    print '!!! no MYSQL_CONN found. using sqlite3'
+    # print '!!! no MYSQL_CONN found. using sqlite3'
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
