@@ -1,0 +1,29 @@
+version: '2'
+
+services:
+
+  backend:
+    build: ./backend
+    ports:
+      - "3011:3011"
+    volumes:
+      - ./backend:/backend
+    environment:
+      - REDIS_CONN=redis://redis:6379/2
+      - MYSQL_CONN=mysql
+      - DEBUG=False
+    depends_on:
+      - redis
+      - mysql
+    command:
+        uwsgi --socket :3011 --wsgi-file base/wsgi.py --master --processes 4 --threads 2 --stats :9191
+
+  redis:
+    image: daocloud.io/redis:3.0.7
+
+  mysql:
+    image: daocloud.io/mysql:5.7
+    environment:
+      - MYSQL_DATABASE=django
+      - MYSQL_ROOT_PASSWORD=Jackon123
+      - MYSQL_ALLOW_EMPTY_PASSWORD=no
