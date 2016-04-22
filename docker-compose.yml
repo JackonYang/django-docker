@@ -11,7 +11,7 @@ services:
     environment:
       - REDIS_CONN=redis://redis:6379/2
       - MYSQL_CONN=mysql
-      - DEBUG=False
+      - DEBUG=True
     depends_on:
       - redis
       - mysql
@@ -27,5 +27,3 @@ services:
       - MYSQL_DATABASE=django
       - MYSQL_ROOT_PASSWORD=Jackon123
       - MYSQL_ALLOW_EMPTY_PASSWORD=no
-    ports:
-        - "3306:3306"
