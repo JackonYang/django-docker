@@ -40,7 +40,7 @@ $ python manage.py createsuperuser  --username=admin --email=i@jackon.me
 
 2. Redis Connection
 
-    - operation: visit `127.0.0.1:8000` in browser, and refresh it 
+    - operation: visit `127.0.0.1:8000` in browser, and refresh it
     - expection: `I have been seen xxx times.` is shown and xxx increase by refreshing
 3. MySQL Connection
 
