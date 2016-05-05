@@ -7,6 +7,7 @@ urlpatterns = patterns('',  # noqa
     url(r'^$', 'base.views.home', name='home'),
     url(r'^grappelli/', include('grappelli.urls')),  # grappelli
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^accounts/', include('django.contrib.auth.urls')),
 )
 
