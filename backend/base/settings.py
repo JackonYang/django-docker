@@ -147,6 +147,11 @@ AUTHENTICATION_BACKENDS = (
 )
 
 
+# Crawler
+DELAY_BOTTOM = 3
+DELAY_TOP = 6
+
+
 try:
     from local_settings import *  # noqa
 except Exception as e:

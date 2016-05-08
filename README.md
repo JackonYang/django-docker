@@ -2,6 +2,15 @@
 
 [docker installation doc](doc/docker-installation.md)
 
+
+## Usage
+
+#### run crawler:
+
+```bash
+$ python manage.py runscript crawler
+```
+
 ## Development Environment
 
 #### building docker images
