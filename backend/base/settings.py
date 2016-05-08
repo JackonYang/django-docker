@@ -71,6 +71,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',  # multi sites.
+    'django_extensions',
     'rest_framework',
     'django_filters',
     'accounts',
