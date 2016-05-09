@@ -5,6 +5,7 @@ from django.conf import settings
 
 urlpatterns = patterns('',  # noqa
     url(r'^$', 'base.views.home', name='home'),
+    url(r'^api$', 'base.views.api_home', name='api_home'),
     url(r'^grappelli/', include('grappelli.urls')),  # grappelli
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
