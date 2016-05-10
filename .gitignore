@@ -20,6 +20,16 @@ __pycache__/
 pip-log.txt
 
 
+### Node.js ###
+
+# Dependency directories
+node_modules
+jspm_packages
+
+# Optional npm cache directory
+.npm
+
+
 ### Vim ###
 .ropeproject
 [._]*.s[a-w][a-z]
