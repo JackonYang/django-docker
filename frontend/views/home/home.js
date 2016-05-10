@@ -1,1 +1,1 @@
-hello
+require("./home.html")

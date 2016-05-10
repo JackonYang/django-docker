@@ -9,6 +9,7 @@
   "author": "hi@zhangxiaoxu.com",
   "license": "ISC",
   "devDependencies": {
+    "file-loader": "^0.8.5",
     "webpack": "^1.13.0"
   }
 }

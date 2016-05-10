@@ -5,6 +5,7 @@
 db.sqlite3
 media
 static
+templates
 local_settings.py
 
 *.log
