@@ -12,7 +12,7 @@ var output_dir = path.join(__dirname, '../backend');
 
 var entrys = {};
 fs.readdirSync(views_dir).forEach(function (name, idx) {
-    entrys[name] = path.join(views_dir, name, name+'.js')
+    entrys[name] = path.join(views_dir, name, name+'.js');
 });
 
 
@@ -29,7 +29,7 @@ config = {
         loader: 'file-loader?name=templates/[name].[ext]'
       },
     ]
-  }
+  },
 };
 
 
