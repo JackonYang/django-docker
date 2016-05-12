@@ -3,14 +3,6 @@
 [docker installation doc](doc/docker-installation.md)
 
 
-## Usage
-
-#### run crawler:
-
-```bash
-$ python manage.py runscript crawler
-```
-
 ## Development Environment
 
 #### building docker images
@@ -18,7 +10,7 @@ $ python manage.py runscript crawler
 download the lastest code and run
 
 ```bash
-$ cd /path/to/canting
+$ cd /path/to/django-docker
 $ docker-compose up
 ```
 
@@ -58,3 +50,12 @@ $ python manage.py createsuperuser  --username=admin --email=i@jackon.me
 
 
 ## Production Environment
+
+
+## Built-in Tools
+
+#### run crawler:
+
+```bash
+$ python manage.py runscript crawler
+```
