@@ -59,4 +59,23 @@ docker-compose version 1.6.2, build 4d72027
 
 #### Mac
 
-TODO
+Some DIFFERENCES from Linux
+
+1. Because the Docker daemon uses Linux-specific kernel features,
+    you can’t run Docker natively in OS X.
+    Instead, you must use docker-machine to create and attach to a virtual machine (VM).
+    This machine is a Linux VM that hosts Docker for you on your Mac.
+2. the website is not available through 127.0.0.1,
+    use VM IP instead.
+
+e.g. VM name is `django-vm`
+
+```bash
+$ brew install docker
+$ brew install Caskroom/cask/dockertoolbox
+$ docker-machine create django-vm --driver virtualbox
+# export env to configure your shell
+$ eval $(docker-machine env django-vm)
+# get ip of VM by vm name
+$ docker-machine ip django-vm
+```
