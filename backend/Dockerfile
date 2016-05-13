@@ -22,6 +22,8 @@ RUN pip install django-thumbs==0.4
 # http://django-extensions-zh.readthedocs.io/
 RUN pip install django-extensions==1.6.7
 
+RUN pip install requests==2.10.0
+
 RUN pip install redis==2.10.5
 RUN pip install django-redis==4.2.0
 RUN pip install MySQL-python==1.2.5
