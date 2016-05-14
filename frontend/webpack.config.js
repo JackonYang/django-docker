@@ -20,7 +20,7 @@ config = {
   entry: entrys,
   output: {
     path: output_dir,
-    filename: "static/[name].js"
+    filename: "base/static/js/[name].js"
   },
   module: {
     loaders: [

@@ -103,7 +103,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = join(BASE_DIR, 'static')
 
 STATICFILES_DIRS = (
-    # join(BASE_DIR, 'base/static'),
+    join(BASE_DIR, 'base/static'),
 )
 
 
